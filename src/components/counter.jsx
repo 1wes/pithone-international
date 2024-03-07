@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from "react";
+import { Fragment, useState, useEffect, useCallback } from "react";
 
 import pithoneLogo from '../assets/pithone.jpeg';
 
@@ -10,7 +10,7 @@ import { FaXTwitter, FaInstagram, FaFacebookF } from 'react-icons/fa6';
 
 const ComingSoon = () => {
 
-    const calculateTimeLeft = () => {
+    const calculateTimeLeft = useCallback(() => {
         
         const timeDifference = +new Date('2024-03-25') - +new Date();
 
@@ -19,15 +19,15 @@ const ComingSoon = () => {
         if (timeDifference > 0) {
             
             timeLeft = {
-                seconds : Math.floor((timeDifference / 1000) % 60),
-                minutes : Math.floor((timeDifference / 1000 / 60) % 60),
-                hours : Math.floor((timeDifference / (1000 * 60 * 60)) % 24),
-                days : Math.floor(timeDifference / (1000 * 60 * 60 * 24))
+                seconds: Math.floor((timeDifference / 1000) % 60),
+                minutes: Math.floor((timeDifference / 1000 / 60) % 60),
+                hours: Math.floor((timeDifference / (1000 * 60 * 60)) % 24),
+                days: Math.floor(timeDifference / (1000 * 60 * 60 * 24))
             }
         }
 
         return timeLeft;
-    }
+    }, []);
 
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
