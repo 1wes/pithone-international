@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 
 import pithoneLogo from '../assets/pithone.jpeg';
 
@@ -9,6 +9,42 @@ import { Link } from "react-router-dom";
 import { FaXTwitter, FaInstagram, FaFacebookF } from 'react-icons/fa6';
 
 const ComingSoon = () => {
+
+    const calculateTimeLeft = () => {
+        
+        const timeDifference = +new Date('2024-03-25') - +new Date();
+
+        let timeLeft = {};
+
+        if (timeDifference > 0) {
+            
+            timeLeft = {
+                seconds : Math.floor((timeDifference / 1000) % 60),
+                minutes : Math.floor((timeDifference / 1000 / 60) % 60),
+                hours : Math.floor((timeDifference / (1000 * 60 * 60)) % 24),
+                days : Math.floor(timeDifference / (1000 * 60 * 60 * 24))
+            }
+        }
+
+        return timeLeft;
+    }
+
+    const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
+    useEffect(() => {
+
+        const runIntervalEverySecond = setInterval(() => {
+            setTimeLeft(calculateTimeLeft);
+        }, 1000);
+
+        return () => {
+            clearInterval(runIntervalEverySecond);
+        }
+        
+    }, [calculateTimeLeft]);
+
+    // format the time to have two significant digits
+    const formatNumbers = digit => String(digit).padStart(2, '0');
     
     return (
         <Fragment>
@@ -25,10 +61,10 @@ const ComingSoon = () => {
                             We Connect Job Seekers With Potential Employers Abroad
                         </p>
                         <div className="counter-cards">
-                            <CounterDownCard duration={`21`} durationType={`days`}/>
-                            <CounterDownCard duration={`23`} durationType={`hours`}/>
-                            <CounterDownCard duration={`58`} durationType={`minutes`}/>
-                            <CounterDownCard duration={`59`} durationType={`seconds`}/>
+                            <CounterDownCard duration={formatNumbers(timeLeft.days)} durationType={`days`}/>
+                            <CounterDownCard duration={formatNumbers(timeLeft.hours)} durationType={`hours`}/>
+                            <CounterDownCard duration={formatNumbers(timeLeft.minutes)} durationType={`minutes`}/>
+                            <CounterDownCard duration={formatNumbers(timeLeft.seconds)} durationType={`seconds`}/>
                         </div>
                         <div className="socials">
                             <p className="socials-text">Follow us for updates</p>
@@ -66,7 +102,7 @@ const Social = ({socialsLink, socialsIcon}) => {
     return (
         <Fragment>
             <div className="social">
-                <Link to={socialsLink} >
+                <Link to={socialsLink} tabIndex={0} target="_blank" >
                     <i>
                         {socialsIcon}
                     </i>
@@ -75,4 +111,6 @@ const Social = ({socialsLink, socialsIcon}) => {
         </Fragment>
     )
 }
+
+
 export default ComingSoon;
