@@ -1,0 +1,121 @@
+.coming-soon{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+.coming-soon-content{
+    backdrop-filter: blur(4px) !important;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.centered-content{
+    margin: 0 auto;
+    width: 80%;
+    padding: .5rem;
+}
+
+.logo img{
+    border-radius: 50%;
+}
+
+.punchline, .tagline{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.punchline{
+    font-size: 55px;
+    margin: 80px 0 0 0;
+    font-weight: 400;
+}
+
+.tagline{
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.counter-cards{
+    padding: 2em;
+    display: flex;
+    justify-content: space-around;
+}
+
+.counterdown-card{
+    align-items: center;
+    justify-content: center;
+}
+
+.duration{
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 80px;
+    font-size: 50px;
+    line-height: 29px;
+    font-weight: 700;
+}
+
+.duration-type{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    padding: 10px;
+    font-weight: 600;
+    color: rgb(95,95,95);
+    background-color: whitesmoke;
+    font-size: 12px;
+}
+
+.socials{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.socials-text{
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.socials-list{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.social{
+    width: 10px;
+    height: 10px;
+    padding: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social i{
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socials-list .social:nth-child(2){
+    background-color: purple;
+}
+
+.socials-list .social:first-child{
+    background-color: rgb(57,164,244);
+}
+
+.socials-list .social:last-child{
+    background-color: rgb(42,98,213);
+}
