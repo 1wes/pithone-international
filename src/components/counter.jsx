@@ -58,7 +58,7 @@ const ComingSoon = () => {
                             OUR WEBSITE IS COMING SOON  !!                       
                         </h1>     
                         <p className="tagline">
-                            We Connect Job Seekers With Potential Employers Abroad
+                            We are an international travel/tours, education, and recruitment firm based in Nairobi.
                         </p>
                         <div className="counter-cards">
                             <CounterDownCard duration={formatNumbers(timeLeft.days)} durationType={`days`}/>
