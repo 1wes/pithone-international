@@ -27,12 +27,18 @@
     justify-content: space-between;
     gap: 12px;
     font-size: 12px;
-    font-weight: bold;
+    font-weight: 700;
+}
 
+.nav-menu div{
+    padding: 2px 5px;
+    border-radius: 2px;
 }
 
 .nav-menu div:hover{
     cursor: pointer;
+    background-color: whitesmoke;
+    color: black;
 }
 
 .nav-socials{
@@ -46,6 +52,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 12px;
+}
+
+.nav-socials div i:hover{
+    color: blue;
 }
 
 .nav-socials div{
