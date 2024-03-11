@@ -1,3 +1,8 @@
+.full-width-navbar{
+    background-color: rgba(0, 0, 0, 0.9);
+    outline: 2px solid whitesmoke;
+}
+
 #navbar{
     display: flex;
     justify-content: space-between;
@@ -11,7 +16,7 @@
 }
 
 .nav-logo{
-    width: 8%;
+    width: 6%;
     height: auto;
     border-radius: 50%;
 }
