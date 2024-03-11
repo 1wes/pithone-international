@@ -3,7 +3,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 100vh;
 }
 
 .coming-soon-content{
@@ -124,6 +123,11 @@
 
 /* Desktop */
 @media only screen and (min-width:1440px){
+
+    .coming-soon{
+        height: 100vh;
+    }
+
     .socials{
         position: fixed;
         bottom: 0;
@@ -134,6 +138,10 @@
 
 /* Tablet */
 @media only screen and (min-width:768px) and (max-width: 1024px){
+
+    .coming-soon{
+        height: 100vh;
+    }
 
     .centered-content{
         width: 90%;
@@ -149,12 +157,15 @@
     }
 }
 
-/* Mobile */
-@media only screen and (max-width:768px){
-
+@media only screen and (min-width:1024px) {
+    
     .coming-soon{
         height: 100%;
     }
+}
+
+/* Mobile */
+@media only screen and (max-width:768px){
 
     .centered-content{
         width: 95%;
@@ -165,6 +176,24 @@
     }
 
     .counter-cards{
-        gap: 40px;
+        gap: 30px;
+        padding: 0;
+        margin: 20px 0 0 0;
+    }
+
+    .duration{
+        padding: 45px;
+    }
+
+    .socials{
+        margin: 40px 0 0 0;
+    }
+
+}
+
+@media only screen and (max-width:380px) {
+    
+    .coming-soon{
+        width: 100%;
     }
 }
