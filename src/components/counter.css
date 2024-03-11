@@ -182,7 +182,7 @@
     }
 
     .duration{
-        padding: 45px;
+        padding: 54px;
     }
 
     .socials{
@@ -191,9 +191,14 @@
 
 }
 
+/* XS mobile */
 @media only screen and (max-width:380px) {
     
     .coming-soon{
         width: 100%;
+    }
+
+    .duration{
+        padding: 45px;
     }
 }
