@@ -18,7 +18,7 @@ const Navbar = () => {
                     <span className="company-name">Pithone International</span>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
                 </div>
                 <div className="nav-menu">
-                    <div>About Us</div>
+                    <div>About</div>
                     <div>Services</div>
                     <div>Clients</div>
                     <div>Contacts</div>
