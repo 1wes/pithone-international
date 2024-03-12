@@ -7,7 +7,7 @@ const SectionHeading = ({heading}) => {
     return (
         <Fragment>
             <h1 className="section-heading">
-                {heading}
+                {`#${heading}`}
             </h1>
         </Fragment>
     )
