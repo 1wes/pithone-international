@@ -43,6 +43,7 @@ button{
     border: none;
     transition: all ease .5s;
     border-radius: 2px;
+    color: whitesmoke;
 }
 
 button:hover{
