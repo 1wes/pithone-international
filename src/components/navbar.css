@@ -38,6 +38,7 @@
 .nav-menu div{
     padding: 2px 5px;
     border-radius: 2px;
+    transition: all ease .5s;
 }
 
 .nav-menu div:hover{
