@@ -43,6 +43,19 @@ const About=()=>{
                             </div>
                         </div>
                     </div>
+                    <div className="vision-mission">
+                        <div className="vision">
+                            <VisionMissionCard heading={`Our Vision.`} goal={`
+                            To Become a leading international travels and tours, education and recruitment service provider in Kenya and East
+                            Africa.`} />
+                        </div>
+
+                        <div className="mission">
+                            <VisionMissionCard heading={`Our Mission.`} goal={`
+                            To build formidable international partnerships and networks that will provide young vibrant Africans viable
+                            opportunities to actualize their dreams and goals anywhere in the world.`} />
+                        </div>
+                    </div>
                 </div>
             </main>
         </Fragment>
@@ -61,6 +74,22 @@ const Stat = ({stat, description}) => {
                     {description}
                 </div>
             </div>            
+        </Fragment>
+    )
+}
+
+const VisionMissionCard = ({heading, goal}) => {
+    
+    return (
+        <Fragment>
+            <div className="statement">
+                <h1 className="goal-header">
+                    {heading}
+                </h1>
+                <p className="goal-statement">
+                    {goal}                  
+                </p>
+            </div>
         </Fragment>
     )
 }
