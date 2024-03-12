@@ -9,6 +9,7 @@
     display: flex;
     gap: 20px;
     justify-content: space-between;
+    margin: 0 0 20px 0;
 }
 
 .who-are-we, .our-stats{
@@ -82,4 +83,47 @@
 .number{
     font-size: 25px;
     font-weight: bold;
+}
+
+.vision-mission{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: whitesmoke;
+}
+
+.vision, .mission{
+    padding: 10px;
+    background-color: rgba(5, 47, 88, 0.801);
+    width: 70%;
+    display: flex;
+    align-items: center;
+}
+
+.vision{
+    align-self: flex-start;
+    border-top-right-radius: 120px;
+    border-bottom-right-radius: 120px;
+    justify-content: flex-end;
+}
+
+.mission{
+    align-self: flex-end;
+    border-top-left-radius: 120px;
+    border-bottom-left-radius: 120px;
+    justify-content:20%;
+}
+
+.mission > .statement{
+    margin-left: 9%;
+}
+
+.statement{
+    width: 50%;
+}
+
+.goal-header{
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
 }
