@@ -114,8 +114,12 @@
     justify-content:20%;
 }
 
+.vision > .statement{
+    margin-right: 4%;
+}
+
 .mission > .statement{
-    margin-left: 9%;
+    margin-left: 5%;
 }
 
 .statement{
