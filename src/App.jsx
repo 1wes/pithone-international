@@ -7,6 +7,7 @@ import About from './components/about';
 import Services from './components/services';
 import Contact from './components/contact';
 import Extra from './components/extra';
+import Footer from './components/footer';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
       <About />
       <Services />
       <Contact />
-      <Extra/>
+      <Extra />
+      <Footer/>
     </Fragment>
   )
 }
