@@ -10,7 +10,7 @@ const About=()=>{
 
     return (
         <Fragment>
-            <main className="about-section">
+            <main className="section" id="about-section">
                 <div className="centered-content">
                     <SectionHeading heading={`About us`} />
                     <div id="about-cards">
