@@ -35,7 +35,7 @@ const Contact = () => {
                                     </h1>
                                     <div className="contacts-list"> 
                                         <ContactInfo icon={<HiBuildingOffice2 />}>
-                                            4th Floor, Kitamu House, Tubman Road, off Kimathi Street, Nairobi CBD, Kenya                            
+                                            4<sup>th</sup> Floor, Kitamu House, Tubman Road, off Kimathi Street, Nairobi CBD, Kenya                            
                                         </ContactInfo>
                                         <ContactInfo icon={<FaPhoneAlt/>} >
                                             <Link to={`tel: +254 7 18 857 871`} target="_blank" >
