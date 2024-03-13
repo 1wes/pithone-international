@@ -6,6 +6,7 @@ import LandingPage from './components/landing';
 import About from './components/about';
 import Services from './components/services';
 import Contact from './components/contact';
+import Extra from './components/extra';
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       <LandingPage />
       <About />
       <Services />
-      <Contact/>
+      <Contact />
+      <Extra/>
     </Fragment>
   )
 }
