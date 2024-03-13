@@ -1,8 +1,7 @@
-.about-section{
+#about-section{
     background-color: white;
     color: rgba(5, 47, 88, 0.801);
     height: 100%;
-    padding: 20px 0;
 }
 
 #about-cards{
