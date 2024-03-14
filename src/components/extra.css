@@ -1,4 +1,9 @@
 #extra-section{
     background-color: white;
-    height: 200px;
+    padding: 240px 0 80px 0;
+}
+
+.clear-image{
+    width: 13%;
+    height: auto;
 }
