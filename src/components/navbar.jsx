@@ -8,6 +8,8 @@ import { Link } from "react-router-dom";
 
 import { FaXTwitter, FaInstagram, FaFacebookF } from 'react-icons/fa6';
 
+import { HashLink as Jumplink } from "react-router-hash-link";
+
 const Navbar = () => {
     
     return (
@@ -19,10 +21,15 @@ const Navbar = () => {
                         <span className="company-name">Pithone International</span>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
                     </div>
                     <div className="nav-menu">
-                        <div>About</div>
-                        <div>Services</div>
-                        <div>Clients</div>
-                        <div>Contacts</div>
+                        <Jumplink smooth to={`#about-section`}>
+                            <div>About</div>                            
+                        </Jumplink>
+                        <Jumplink smooth to={`#services-section`}>
+                            <div>Services</div>                            
+                        </Jumplink>
+                        <Jumplink smooth to={`#contact-section`} >
+                            <div>Contacts</div>                            
+                        </Jumplink>
                     </div>
                     <div className="nav-socials">
                         <NavSocials navSocialIcon={<FaXTwitter/>} />

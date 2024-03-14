@@ -4,8 +4,7 @@ import './landing.css';
 
 import Navbar from "./navbar";
 
-import { Link } from "react-router-dom";
-
+import { HashLink as Jumplink } from "react-router-hash-link";
 const LandingPage = () => {
     
     return (
@@ -22,12 +21,12 @@ const LandingPage = () => {
                     </p>
                 </div>
                 <div className="centered-content" id="hero-cta">
-                    <Link>
+                    <Jumplink smooth to={`#about-section`} >
                         <Button type={`button`} text={`About us`}  className={`primary-btn`} />
-                    </Link>
-                    <Link>
+                    </Jumplink>
+                    <Jumplink smooth to={`#services-section`}>
                         <Button type={`button`} text={`What we do`} className={`secondary-btn`} />
-                    </Link>
+                    </Jumplink>
                 </div>
             </main>
         </Fragment>
