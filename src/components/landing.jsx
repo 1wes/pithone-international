@@ -23,10 +23,10 @@ const LandingPage = () => {
                 </div>
                 <div className="centered-content" id="hero-cta">
                     <Link>
-                        <Button text={`About us`}  className={`primary-btn`} />
+                        <Button type={`button`} text={`About us`}  className={`primary-btn`} />
                     </Link>
                     <Link>
-                        <Button text={`What we do`} className={`secondary-btn`} />
+                        <Button type={`button`} text={`What we do`} className={`secondary-btn`} />
                     </Link>
                 </div>
             </main>
@@ -34,13 +34,17 @@ const LandingPage = () => {
     )
 }
 
-const Button = ({className, text, onClick}) => {
+const Button = ({ className, text, onClick, id, type }) => {
     
     return (
-        <button type="button" className={className} onClick={onClick} >
+        <button type={type} className={className} onClick={onClick} id={id} >
             {text}
         </button>
     )
+}
+
+export {
+    Button
 }
 
 export default LandingPage;
