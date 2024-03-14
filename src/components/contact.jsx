@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 
 import './contact.css';
 
@@ -9,9 +9,23 @@ import { FaPhoneAlt, FaFacebookSquare, FaInstagramSquare } from "react-icons/fa"
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { MdOutgoingMail } from "react-icons/md";
-
+import { Button } from "./landing";
 
 const Contact = () => {
+
+    const[form, setForm] = useState({
+        name: "",
+        email: "",
+        message: ""
+    });
+
+    const { name, email, message } = form;
+
+    const handleSubmit = (e) => {
+        
+        e.preventDefault();
+
+    }
     
     return (
         <Fragment>
@@ -24,10 +38,37 @@ const Contact = () => {
                                 You can visit us at our offices or use the contact form below.
                             </h2>
                             <div className="contacts">
-                                <form className="contact-form">
+                                <form className="contact-form" onSubmit={handleSubmit} >
                                     <h1 className="contact-header">
                                         Talk To Us
                                     </h1>
+                                    
+                                    <div className="fields">
+                                        <div className="inline-fields">
+                                            <div className="input">
+                                                <label>
+                                                    Name
+                                                </label>    
+                                                <input type="text" value={name} onChange={(e)=>{setForm({...form, name:e.target.value})}} required/>
+                                            </div>
+                                            <div className="input">
+                                                <label>
+                                                    Email
+                                                </label>
+                                                <input type="email" value={email} onChange={(e)=>{setForm({...form, email:e.target.value})}} required/> 
+                                            </div>
+                                        </div>
+                                        <div className="input">
+                                            <label htmlFor="">
+                                                Your Message
+                                            </label>
+                                            <textarea value={message} onChange={(e)=>{setForm({...form, message:e.target.value})}} required>
+
+                                            </textarea>
+                                        </div>
+
+                                        <Button type={`submit`} className={`primary-btn`} id={`submit-btn`} text={`Send Message`} />
+                                    </div>
                                 </form>
                                 <div className="contact-info">
                                     <h1 className="contact-header">
