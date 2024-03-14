@@ -13,17 +13,23 @@ import { Button } from "./landing";
 
 const Contact = () => {
 
-    const[form, setForm] = useState({
+    const initialFormState = {
         name: "",
         email: "",
         message: ""
-    });
+    }
+
+    const[form, setForm] = useState(initialFormState);
 
     const { name, email, message } = form;
 
     const handleSubmit = (e) => {
         
         e.preventDefault();
+
+        setForm({
+            ...initialFormState
+        })
 
     }
     
