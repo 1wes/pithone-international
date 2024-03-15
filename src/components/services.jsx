@@ -40,7 +40,7 @@ const ServiceCards = ({ image, service, description }) => {
         <Fragment>
             <div className="service-card">
                 <div className="service-image">
-                    <img className="service-card-image" src={image} />
+                    <img className="service-card-image" src={image} alt="service-image" />
                 </div>
                 <div className="service-card-text">
                     <h3 className="service-title">
