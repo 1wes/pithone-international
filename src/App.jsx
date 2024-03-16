@@ -8,6 +8,7 @@ import Services from './components/services';
 import Contact from './components/contact';
 import Extra from './components/extra';
 import Footer from './components/footer';
+import Testimonials from './components/testimonial';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <LandingPage />
       <About />
       <Services />
+      <Testimonials/>
       <Contact />
       <Extra />
       <Footer/>
