@@ -33,9 +33,9 @@
 }
 
 .service-card-text{
-    width: 100%;
-    padding: 0 10pxx;
+    padding: 0 10px;
     flex: 1;
+    line-height: 25px;
 }
 
 .service-title{
@@ -47,6 +47,6 @@
 }
 
 .service-description{
-    text-align: center;
+    text-align: left;
     font-size: 15px;
 }
