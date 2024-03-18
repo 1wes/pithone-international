@@ -10,6 +10,10 @@
     color: whitesmoke;
 }
 
+#mobile-navbar{
+    display: none;
+}
+
 .nav-logo-container{
     display: flex;
     align-items: center;
@@ -75,4 +79,39 @@
 
 .nav-socials div:hover{
     cursor: pointer;
+}
+
+
+@media only screen and (max-width: 768px){
+
+    #desktop-navbar{
+        display: none;
+    }
+
+    #mobile-nav{
+        display: flex;
+    }
+
+    #mobile-nav-logo{
+        width: 15%;
+    }
+
+    #mobile-navbar{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .kebab-menu{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        /* padding: 0px 15px; */
+        height: 100%;
+    }
+
+    .kebab-menu i{
+        display: flex;
+        align-items: center;
+        font-size: 25px;
+    }
 }
