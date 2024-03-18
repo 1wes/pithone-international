@@ -54,10 +54,13 @@
     border-top-left-radius: 130px;
     border-bottom-left-radius: 130px;
     border-bottom-right-radius: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .client-image img{
-    height: auto;
+    height: 100%;
     max-width: 100%;
     object-fit: cover;
     filter: grayscale(100%);
@@ -115,9 +118,11 @@
     }
 
     .client-image{
-        border-top-left-radius: 100px;
-        border-bottom-left-radius: 100px;
-        border-bottom-right-radius: 100px;
+        border-top-left-radius: 80px;
+        border-bottom-left-radius: 80px;
+        border-bottom-right-radius: 80px;
+        height: 150px;
+        flex-basis: 50%;
     }
 
 
