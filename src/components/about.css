@@ -160,6 +160,7 @@
     .vision, .mission{
         width: 100%;
         align-items: center;
+        padding: 10px 0;
     }
 
     .vision{
@@ -179,5 +180,24 @@
     .statement{
         width: 100%;
         text-align: center;
+    }
+
+    .goal-statement{
+        padding: 0 15px ;
+    }
+
+    .vision > .statement{
+        margin-right: 0%;
+    }
+    
+    .mission > .statement{
+        margin-left: 0%;
+    }
+}
+
+@media only screen and (max-width:480px){
+
+    .stat{
+        width: 44%;
     }
 }
