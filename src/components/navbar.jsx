@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 
 import './navbar.css';
 
@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 
 import { FaXTwitter, FaInstagram, FaFacebookF } from 'react-icons/fa6';
 import { CiMenuKebab } from "react-icons/ci";
+import { IoClose } from "react-icons/io5";
 
 import { HashLink as Jumplink } from "react-router-hash-link";
 
@@ -43,6 +44,13 @@ const Navbar = () => {
 }
 
 const MobileNav = () => {
+
+    const [showMenu, setShowMenu] = useState(false);
+
+    const toggleMenu = () => {
+        
+        setShowMenu(!showMenu);
+    }
     
     return (
         <Fragment>
@@ -51,10 +59,13 @@ const MobileNav = () => {
                     <div className="nav-logo-container">
                         <Logo Id={`mobile-nav-logo`} />
                     </div>
-                    <div className="kebab-menu">
+                    <div className="kebab-menu" onClick={toggleMenu}  >
                         <i>
-                            <CiMenuKebab/>
+                            {showMenu?<i><IoClose/></i>:<i><CiMenuKebab/></i>}
                         </i>
+                        <div className={showMenu?"show-menu":"menu"}>
+                            Am the menu
+                        </div>
                     </div>
                 </nav>
             </div>
