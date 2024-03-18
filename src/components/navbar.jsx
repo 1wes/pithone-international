@@ -7,6 +7,7 @@ import pithoneLogo from '../assets/pithone.jpeg';
 import { Link } from "react-router-dom";
 
 import { FaXTwitter, FaInstagram, FaFacebookF } from 'react-icons/fa6';
+import { CiMenuKebab } from "react-icons/ci";
 
 import { HashLink as Jumplink } from "react-router-hash-link";
 
@@ -14,11 +15,10 @@ const Navbar = () => {
     
     return (
         <Fragment>
-            <div className="full-width-navbar">
+            <div className="full-width-navbar" id="desktop-navbar">
                 <nav className="centered-content" id="navbar">
                     <div className="nav-logo-container">
-                        <img className="nav-logo" src={pithoneLogo} />
-                        <span className="company-name">Pithone International</span>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+                        <Logo/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
                     </div>
                     <div className="nav-menu">
                         <Jumplink smooth to={`#about-section`}>
@@ -42,6 +42,26 @@ const Navbar = () => {
     )
 }
 
+const MobileNav = () => {
+    
+    return (
+        <Fragment>
+            <div className="full-width-navbar" id="mobile-nav">
+                <nav className="centered-content" id="mobile-navbar" >
+                    <div className="nav-logo-container">
+                        <Logo Id={`mobile-nav-logo`} />
+                    </div>
+                    <div className="kebab-menu">
+                        <i>
+                            <CiMenuKebab/>
+                        </i>
+                    </div>
+                </nav>
+            </div>
+        </Fragment>
+    )
+}
+
 const NavSocials = ({navSocialLink, navSocialIcon}) => {
     
     return (
@@ -54,4 +74,19 @@ const NavSocials = ({navSocialLink, navSocialIcon}) => {
         </div>
     )
 }
+
+const Logo = ({ Id }) => {
+    
+    return (
+        <Fragment>
+            <img className="nav-logo" id={Id} src={pithoneLogo} />            
+            <span className="company-name">Pithone International</span>               
+        </Fragment>
+    )
+}
+
+export {
+    MobileNav
+}
+
 export default Navbar;
