@@ -23,7 +23,7 @@
 
 @media only screen and (max-width: 768px){
 
-    .section{
+    #footer-section{
         display: none;
     }
 }

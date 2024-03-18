@@ -72,7 +72,7 @@ button:hover{
 
 @media only screen and (max-width: 768px){
 
-    .section{
+    /* #hero-section, #hero-cta{
         display: none;
-    }
+    } */
 }
