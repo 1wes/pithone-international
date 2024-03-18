@@ -59,9 +59,9 @@ const MobileNav = () => {
                     <div className="nav-logo-container">
                         <Logo Id={`mobile-nav-logo`} />
                     </div>
-                    <div className="kebab-menu" onClick={toggleMenu}  >
-                        <i>
-                            {showMenu?<i><IoClose/></i>:<i><CiMenuKebab/></i>}
+                    <div className="kebab-menu" >
+                        <i onClick={toggleMenu}>
+                            {showMenu?<IoClose/>:<CiMenuKebab/>}
                         </i>
                         <div className={showMenu?"show-menu":"menu"}>
                             Am the menu
