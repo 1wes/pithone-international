@@ -64,7 +64,18 @@ const MobileNav = () => {
                             {showMenu?<IoClose/>:<CiMenuKebab/>}
                         </i>
                         <div className={showMenu?"show-menu":"menu"}>
-                            Am the menu
+                            <div className="mobile-nav-menu">
+                                <div className="menu-items">
+                                    <MobileJumpLink to={`#about-section`} menuItem={`About`} callbackFunction={toggleMenu}  />
+                                    <MobileJumpLink  to={`#services-section`} menuItem={`Services`} callbackFunction={toggleMenu} />                             
+                                    <MobileJumpLink to={`#contact-section`} menuItem={`Contacts`} callbackFunction={toggleMenu} />                              
+                                </div>    
+                                <div className="nav-socials" id="mobile-nav-socials">
+                                    <NavSocials navSocialIcon={<FaXTwitter/>} callbackFunction={toggleMenu} />
+                                    <NavSocials navSocialIcon={<FaInstagram/>} callbackFunction={toggleMenu} />
+                                    <NavSocials navSocialIcon={<FaFacebookF/>} callbackFunction={toggleMenu} />
+                                </div>
+                            </div>                            
                         </div>
                     </div>
                 </nav>
@@ -73,10 +84,10 @@ const MobileNav = () => {
     )
 }
 
-const NavSocials = ({navSocialLink, navSocialIcon}) => {
+const NavSocials = ({navSocialLink, navSocialIcon, callbackFunction}) => {
     
     return (
-        <div>
+        <div onClick={callbackFunction}>
             <Link to={navSocialLink}>
                 <i>
                     {navSocialIcon}
@@ -92,6 +103,17 @@ const Logo = ({ Id }) => {
         <Fragment>
             <img className="nav-logo" id={Id} src={pithoneLogo} />            
             <span className="company-name">Pithone International</span>               
+        </Fragment>
+    )
+}
+
+const MobileJumpLink = ({to, menuItem, callbackFunction}) => {
+    
+    return (
+        <Fragment>
+            <Jumplink smooth to={to} onClick={callbackFunction} >                   
+                <div>{ menuItem }</div>                               
+            </Jumplink>            
         </Fragment>
     )
 }
