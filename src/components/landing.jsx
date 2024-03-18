@@ -3,14 +3,17 @@ import { Fragment } from "react";
 import './landing.css';
 
 import Navbar from "./navbar";
+import { MobileNav } from "./navbar";
 
 import { HashLink as Jumplink } from "react-router-hash-link";
+
 const LandingPage = () => {
     
     return (
         <Fragment>
             <main className="landing-page">
                 <Navbar />
+                <MobileNav/>
                 <div className="centered-content" id="hero-section">
                     <h1 className="hero-punchline">
                         Embark on a <span className="important-text">Global</span> Journey.
