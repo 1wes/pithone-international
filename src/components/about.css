@@ -1,19 +1,18 @@
 #about-section{
     background-color: white;
     color: rgba(5, 47, 88, 0.801);
-    height: 100%;
 }
 
 #about-cards{
     display: flex;
     gap: 20px;
-    justify-content: space-between;
     margin: 0 0 20px 0;
+    flex-wrap: wrap;
 }
 
 .who-are-we, .our-stats{
     border-radius: 5px;
-    width: 48%;
+    flex:1;
 }
 
 .our-stats{
@@ -97,7 +96,6 @@
     width: 70%;
     display: flex;
     align-items: center;
-    /* text-align: center; */
 }
 
 .vision{
@@ -111,7 +109,6 @@
     align-self: flex-end;
     border-top-left-radius: 120px;
     border-bottom-left-radius: 120px;
-    justify-content:20%;
 }
 
 .vision > .statement{
@@ -140,7 +137,47 @@
 
 @media only screen and (max-width: 768px){
 
-    .section{
-        display: none;
+    #who-we-are, .our-stats{
+        flex-basis: 100%;
+    }
+
+    .company-image, .company-stats{
+        flex-basis: 100%;
+    }
+
+    .company-stats{
+        padding: 8px;
+    }
+
+    .our-stats{
+        gap: 5px;
+    }
+
+    .stat{
+        width: 45%;
+    }
+
+    .vision, .mission{
+        width: 100%;
+        align-items: center;
+    }
+
+    .vision{
+        align-self: flex-start;
+        border-top-right-radius: 100px;
+        border-bottom-right-radius: 100px;
+        justify-content: flex-start;
+    }
+
+    .mission{
+        align-self: center;
+        border-top-left-radius: 100px;
+        border-bottom-left-radius: 100px;
+        justify-content:20%;
+    }
+
+    .statement{
+        width: 100%;
+        text-align: center;
     }
 }
