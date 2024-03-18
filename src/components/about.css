@@ -146,15 +146,12 @@
     }
 
     .company-stats{
-        padding: 8px;
-    }
-
-    .our-stats{
+        /* padding: 8px; */
         gap: 5px;
     }
 
     .stat{
-        width: 45%;
+        width: 46.5% !important;
     }
 
     .vision, .mission{
@@ -195,9 +192,9 @@
     }
 }
 
-@media only screen and (max-width:480px){
+@media only screen and (max-width:380px){
 
     .stat{
-        width: 44%;
+        width: 46% !important;
     }
 }
