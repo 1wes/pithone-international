@@ -17,7 +17,7 @@ const Footer = () => {
                             <MdCopyright/>
                         </i>
                         <span className="copyright-year">
-                            {year}.
+                            {year}
                         </span>
                         <span>
                             Pithone International. All Rights Reserved.
