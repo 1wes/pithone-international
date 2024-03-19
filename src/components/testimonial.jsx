@@ -78,7 +78,7 @@ const Testimonial = () => {
                             <i><FaQuoteRight/></i>
                         </span>
                         <div className="client-name">
-                            Peter Gichere
+                            John Doe
                         </div>
                     </div>
                 </div>
