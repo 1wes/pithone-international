@@ -82,12 +82,17 @@ const Contact = () => {
                                     </h1>
                                     <div className="contacts-list"> 
                                         <ContactInfo icon={<HiBuildingOffice2 />}>
-                                            4<sup>th</sup> Floor, Kitamu House, Tubman Road, off Kimathi Street, Nairobi CBD, Kenya                            
+                                            6<sup>th</sup> Floor, Kitamu House, Tubman Road, off Kimathi Street, Nairobi CBD, Kenya                            
                                         </ContactInfo>
                                         <ContactInfo icon={<FaPhoneAlt/>} >
                                             <Link to={`tel: +254 7 18 857 871`} target="_blank" >
                                                 +254 718 857 871
                                             </Link>
+                                            <div>
+                                                <Link to={`tel: +254 7 15 688 292`} target="_blank" >
+                                                    +254 715 688 292                                            
+                                                </Link>
+                                            </div>
                                         </ContactInfo>
                                         <ContactInfo icon={<MdOutgoingMail/>} >
                                             <Link to={`mailto: info@pithone.co.ke`} target="_blank" >
