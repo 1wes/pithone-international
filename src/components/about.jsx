@@ -38,8 +38,8 @@ const About=()=>{
                             <div className="company-stats">
                                 <Stat stat={`3+`} description={`Operation Years`}/>
                                 <Stat stat={`500+`} description={`Clients Served`} />
-                                <Stat stat={`6`} description={`Countries`} />
-                                <Stat stat={`3`} description={`Services Rendered`} />
+                                <Stat stat={`6+`} description={`Countries`} />
+                                <Stat stat={`3+`} description={`Services Rendered`} />
                             </div>
                         </div>
                     </div>
