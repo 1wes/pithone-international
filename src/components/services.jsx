@@ -1,8 +1,9 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 
 import './services.css';
 
 import SectionHeading from "./heading";
+import { Button } from "./landing";
 
 import dubai from '../assets/dubai.jpg';
 import boardroom from '../assets/boardroom.png';
@@ -50,6 +51,8 @@ const Services = () => {
 
 const ServiceCards = ({ image, service, description }) => {
 
+    const [showMore, setShowMore] = useState(false);
+
     return (
         <Fragment>
             <div className="service-card">
@@ -61,9 +64,14 @@ const ServiceCards = ({ image, service, description }) => {
                         {service}
                     </h3> 
                     <p className="service-description">
-                        {description}                    
-                    </p>
+                        {`${showMore ? `${description}`: `${description.substring(0, 350)}...`}`}
+                    </p>                    
                 </div>
+
+                <div className="read-more">
+                      <Button text={showMore?'Show Less': 'Show More'} onClick={()=>{setShowMore(!showMore)}}  id={`more-cta`} />                    
+                </div>  
+                
             </div>
         </Fragment>
     )
