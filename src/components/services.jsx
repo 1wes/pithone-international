@@ -4,6 +4,7 @@ import './services.css';
 
 import SectionHeading from "./heading";
 import { Button } from "./landing";
+import { HashLink as Jumplink } from "react-router-hash-link";
 
 import dubai from '../assets/dubai.jpg';
 import boardroom from '../assets/boardroom.png';
@@ -38,10 +39,7 @@ const Services = () => {
                         <ServiceCards image={passport} service={`Kenyan Government Services`}
                             description={`We offer All Kenyan government services; Immigration(Passport and the like), DCI(Good Conduct), Ministry of 
                          Foreign Affairs(Attestation), Ministry of Lands(Rates & Boma Yangu), Asylum Seeking Documentation et.al. The offered services
-                         are done legitimately in line with government procedures and at an extra cost, they are hastened. For example, a passport application
-                          will be done as you are advised on which is the most suitable options in terms of the available booklets at the printing department
-                          in the immigration offices. After the biometrics are captured at the desired station, the passport will take 5 working days unlike
-                          the precedented time which is unknown.`} />        
+                         are done legitimately in line with government procedures and at an extra cost, they are hastened.`} />        
                     </div>
                 </div>
             </main>
@@ -50,8 +48,6 @@ const Services = () => {
 }
 
 const ServiceCards = ({ image, service, description }) => {
-
-    const [showMore, setShowMore] = useState(false);
 
     return (
         <Fragment>
@@ -64,14 +60,14 @@ const ServiceCards = ({ image, service, description }) => {
                         {service}
                     </h3> 
                     <p className="service-description">
-                        {`${showMore ? `${description}`: `${description.substring(0, 350)}...`}`}
+                        {description}
                     </p>                    
                 </div>
-
-                <div className="read-more">
-                      <Button text={showMore?'Show Less': 'Show More'} onClick={()=>{setShowMore(!showMore)}}  id={`more-cta`} />                    
-                </div>  
-                
+                <div>
+                    <Jumplink smooth to={`#contact-section`} className="read-more">
+                        <Button id={`more-cta`} text={`I Am Interested`} />
+                    </Jumplink>
+                </div>                  
             </div>
         </Fragment>
     )
