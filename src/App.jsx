@@ -6,7 +6,7 @@ import LandingPage from './components/landing';
 import About from './components/about';
 import Services from './components/services';
 import Contact from './components/contact';
-import Extra from './components/extra';
+import Extra from './components/gallery';
 import Footer from './components/footer';
 import Testimonials from './components/testimonial';
 
