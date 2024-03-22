@@ -124,6 +124,21 @@
         height: 150px;
         flex-basis: 50%;
     }
+}
 
+/* portrait tablet */
+@media only screen and (min-width:768px) and (max-width:1024px){
 
+    .testimonial{
+        align-items: center;
+    }
+
+    .client-image{
+        flex-basis: 30%;
+        height: 100%;
+    }
+
+    .client-testimony{
+        flex-basis: 60%;
+    }
 }

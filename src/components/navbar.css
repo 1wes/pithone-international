@@ -81,7 +81,7 @@
     cursor: pointer;
 }
 
-
+/* mobile */
 @media only screen and (max-width: 768px){
 
     #desktop-navbar{
@@ -160,5 +160,12 @@
     #mobile-nav-socials{
         padding: 4px 3px;
     }
+}
 
+/* portrait tablet */
+@media only screen and (min-width:768px) and (max-width:1024px){
+
+    .menu, .show-menu{
+        margin-top: 120px;
+    }
 }

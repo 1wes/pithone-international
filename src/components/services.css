@@ -76,3 +76,11 @@
         width: 60%;
     }
 }
+
+/* portrait tablet */
+@media only screen and (min-width:768px) and (max-width:1024px){
+
+    .service-card{
+        max-width: 48.5%;
+    }
+}
