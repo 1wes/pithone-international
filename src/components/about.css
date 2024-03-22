@@ -28,7 +28,6 @@
 }
 
 .who-are-we h3{
-    color: black;
     padding: 0;
     margin: 0;
 }
@@ -123,7 +122,7 @@
     width: 50%;
 }
 
-.goal-header{
+.goal-header, .value-header{
     margin: 0;
     padding: 0;
     font-size: 25px;
@@ -134,6 +133,9 @@
     margin-bottom: 0;
 }
 
+.value-header{
+    margin: 20px 0 0 0;
+}
 
 @media only screen and (max-width: 768px){
 
@@ -146,7 +148,6 @@
     }
 
     .company-stats{
-        /* padding: 8px; */
         gap: 5px;
     }
 
