@@ -166,11 +166,15 @@ textarea{
 
 @media only screen and (min-width:820px) and (max-width:1180px){
 
+    .contact-form, .contact-info{
+        flex-basis: 100%;
+    }
+
     #contact-section{
-        height: 540px;
+        height: 840px;
     }
 
     #submit-btn{
-        width: 100%;
+        width: 45%;
     }
 }
