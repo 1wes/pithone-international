@@ -1,0 +1,98 @@
+#gallery-section{
+    background-color: white;
+    padding: 240px 0 80px 0;
+}
+
+.gallery-images{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 0 0 40px 0;
+}
+
+.gallery-image{
+    width: 32%;
+    box-shadow: 0 4px 6px rgba(24, 13, 13, 0.1), 0 1px 3px rgba(0, 0, 0, 0.8);
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 300px;
+}
+
+.gallery-image img{
+    height: 100%;
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.clear-image{
+    width: 13%;
+    height: auto;
+}
+
+.image-overlay{
+    position: absolute;
+    color: whitesmoke;
+    width: 100%;
+    transition: all ease .7s;
+    text-align: center;
+    bottom: 0;
+    height: 0;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.image-overlay h2, .image-overlay p{
+    padding: 0;
+    margin: 0;
+}
+
+hr{
+    width: 70%;
+}
+
+.gallery-images .gallery-image:first-child .image-overlay {
+    background-color:rgb(1,135,198);
+}
+
+.gallery-images .gallery-image:nth-child(2) .image-overlay {
+    background-color:rgb(192, 38, 223);
+}
+
+.gallery-images .gallery-image:nth-child(3) .image-overlay {
+    background-color:rgb(197, 181, 37);
+}
+
+.gallery-images .gallery-image:nth-child(4) .image-overlay {
+    background-color: rgb(120, 172, 38);
+}
+
+.gallery-images .gallery-image:nth-child(5) .image-overlay {
+    background-color: rgb(246,0,101);
+}
+
+.gallery-images .gallery-image:last-child .image-overlay {
+    background-color: rgb(254,133,69);
+}
+
+
+.gallery-image:hover .image-overlay{
+    opacity: 1;
+    height: 100%;
+}
+
+@media only screen and (max-width: 768px){
+
+    #gallery-section{
+        
+        .clear-image{
+            width: 20%;
+        }
+    }
+}
