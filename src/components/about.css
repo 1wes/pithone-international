@@ -207,3 +207,28 @@
         width: 48% !important;
     }
 }
+
+/* iPad air tablet */
+@media only screen and (min-width:820px) and (max-width:1180px){
+
+    .stat{
+        width: 44.5% !important;
+    }
+
+    .vision, .mission{
+        width: 97%;
+    }
+    
+    .vision > .statement{
+        margin-right: 0%;
+    }
+    
+    .mission > .statement{
+        margin-left: 0%;
+    }
+
+    .statement{
+        width: 100%;
+        text-align: center;
+    }
+}

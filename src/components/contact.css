@@ -163,3 +163,14 @@ textarea{
         width: 40%;
     }
 }
+
+@media only screen and (min-width:820px) and (max-width:1180px){
+
+    #contact-section{
+        height: 540px;
+    }
+
+    #submit-btn{
+        width: 100%;
+    }
+}
