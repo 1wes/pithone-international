@@ -1,6 +1,6 @@
 #gallery-section{
     background-color: white;
-    padding: 240px 0 80px 0;
+    padding: 240px 0 40px 0;
 }
 
 .gallery-images{
@@ -89,10 +89,11 @@ hr{
 
 @media only screen and (max-width: 768px){
 
-    #gallery-section{
-        
-        .clear-image{
-            width: 20%;
-        }
+    .clear-image{
+        width: 20%;
+    }
+
+    .gallery-image{
+        width: 90%;
     }
 }
