@@ -25,6 +25,9 @@ const Navbar = () => {
                         <Jumplink smooth to={`#about-section`}>
                             <div>About</div>                            
                         </Jumplink>
+                        <Jumplink smooth to={`#our-values`} >
+                            <div>Values</div>                            
+                        </Jumplink>
                         <Jumplink smooth to={`#services-section`}>
                             <div>Services</div>                            
                         </Jumplink>
@@ -67,6 +70,7 @@ const MobileNav = () => {
                             <div className="mobile-nav-menu">
                                 <div className="menu-items">
                                     <MobileJumpLink to={`#about-section`} menuItem={`About`} callbackFunction={toggleMenu}  />
+                                    <MobileJumpLink to={`#our-values`} menuItem={`Values`} callbackFunction={toggleMenu}  />
                                     <MobileJumpLink  to={`#services-section`} menuItem={`Services`} callbackFunction={toggleMenu} />                             
                                     <MobileJumpLink to={`#contact-section`} menuItem={`Contacts`} callbackFunction={toggleMenu} />                              
                                 </div>    
