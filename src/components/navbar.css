@@ -162,6 +162,14 @@
     }
 }
 
+/* XS-mobile */
+@media only screen and (max-width:380px) {
+    
+    .menu, .show-menu{
+        margin-top: 67px;
+    }
+}
+
 /* portrait tablet */
 @media only screen and (min-width:768px) and (max-width:1024px){
 
