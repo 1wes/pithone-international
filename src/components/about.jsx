@@ -4,7 +4,12 @@ import './about.css';
 
 import SectionHeading from "./heading";
 
-import conferenceImg from '../assets/conference.png'
+import conferenceImg from '../assets/conference.png';
+
+import { MdAllInclusive, MdBolt } from "react-icons/md";
+import { FaHandshake } from "react-icons/fa";
+import { GiBullseye } from "react-icons/gi";
+import { RiTeamFill } from "react-icons/ri";
 
 const About=()=>{
 
@@ -56,6 +61,23 @@ const About=()=>{
                             opportunities to actualize their dreams and goals anywhere in the world.`} />
                         </div>
                     </div>
+                    <div className="core-values">
+                        <h2 className="value-header">
+                            Our Core Values.
+                        </h2>
+                        <div className="values-list">
+                            <Value icon={<MdAllInclusive/>} value={`Inclusive`} description={`We accommodate everyone in our teams.
+                                We encourage diversity.`} />
+                            <Value icon={<FaHandshake/>} value={`Trust`} description={`We trust each other.
+                                We believe in our teams' ability to get the job done.`} />
+                            <Value icon={<GiBullseye/>} value={`Intentional`} description={`We know our stuff.
+                                We execute with definiteness of purpose.`} />
+                            <Value icon={<MdBolt/>} value={`Speed and Accuracy`} description={`We are fast.
+                                We work towards excellence.`} />
+                            <Value icon={<RiTeamFill/>} value={`Team`} description={`We thrive in togetherness.
+                                Union is our core.`} />
+                        </div>
+                    </div>
                 </div>
             </main>
         </Fragment>
@@ -88,6 +110,27 @@ const VisionMissionCard = ({heading, goal}) => {
                 </h1>
                 <p className="goal-statement">
                     {goal}                  
+                </p>
+            </div>
+        </Fragment>
+    )
+}
+
+const Value = ({ icon, value, description }) => {
+    
+    return (
+        <Fragment>
+            <div className="value">
+                <div className="value-icon">
+                    <i>
+                        {icon}
+                    </i>
+                </div>
+                <h2 className="value-title">
+                    {value}
+                </h2>
+                <p className="value-description">
+                    {description}
                 </p>
             </div>
         </Fragment>
