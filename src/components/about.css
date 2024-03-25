@@ -152,7 +152,6 @@
     justify-content: center;
     flex-direction: column;
     gap: 10px;
-    /* background-color: red; */
     padding: 20px 0;
 }
 
@@ -238,6 +237,10 @@
     .mission > .statement{
         margin-left: 0%;
     }
+
+    .value{
+        width: 47%;
+    }
 }
 
 /* XS mobile */
@@ -278,6 +281,14 @@
     .statement{
         width: 100%;
         text-align: center;
+    }
+
+    .values-list{
+        justify-content: space-evenly;
+    }
+
+    .value{
+        width: 30%;
     }
 }
 
