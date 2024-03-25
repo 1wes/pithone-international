@@ -61,7 +61,7 @@ const About=()=>{
                             opportunities to actualize their dreams and goals anywhere in the world.`} />
                         </div>
                     </div>
-                    <div className="core-values">
+                    <div className="core-values" id="our-values">
                         <h2 className="value-header">
                             Our Core Values.
                         </h2>
