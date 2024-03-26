@@ -3,13 +3,17 @@ import { Fragment, useState } from "react";
 import './contact.css';
 
 import SectionHeading from './heading';
+import axiosInstance from "../utils/axios";
+import Overlay from "./overlay";
+import { Button } from "./landing";
 
 import { HiBuildingOffice2 } from "react-icons/hi2";
 import { FaPhoneAlt, FaFacebookSquare, FaInstagramSquare } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import { MdOutgoingMail } from "react-icons/md";
-import { Button } from "./landing";
+import { MdOutgoingMail, MdOutlineClose } from "react-icons/md";
+import { GiCheckMark } from "react-icons/gi";
+
 
 const Contact = () => {
 
@@ -18,19 +22,55 @@ const Contact = () => {
         email: "",
         message: ""
     }
+    const initialOverlayState = {
+        show: false,
+        status: '',
+        feedback:'',
+        error:false
+    }
 
-    const[form, setForm] = useState(initialFormState);
+    const [form, setForm] = useState(initialFormState);
+    const [overlay, setOverlay] = useState(initialOverlayState);
 
     const { name, email, message } = form;
+    const { show, status, feedback, error } = overlay;
 
     const handleSubmit = (e) => {
         
         e.preventDefault();
 
+        const formInfo = {
+            name, email, message
+        }
+
+        axiosInstance.post("https://mail-projectsapi.onrender.com/pithone-mail", formInfo).then(() => {
+
+            setOverlay({
+                ...overlay,
+                show:true,
+                status: "Success!",
+                feedback:"Your message has successfully been delivered."
+            })
+        }).catch(() => {
+            
+            setOverlay({
+                show: true,
+                error:true,
+                status: "Failed!",
+                feedback:"We encountered an error. Please try again or contact support."
+            })
+        })
+
         setForm({
             ...initialFormState
         })
+    }
 
+    const closeOverlay = () => {
+        
+        setOverlay({
+            ...initialOverlayState
+        })
     }
     
     return (
@@ -76,6 +116,9 @@ const Contact = () => {
                                         <Button type={`submit`} className={`primary-btn`} id={`submit-btn`} text={`Send Message`} />
                                     </div>
                                 </form>
+                                {/* overlay display logic*/}
+                                {show && (!error ? <Overlay id={`success`} icon={<GiCheckMark />} header={status} message={feedback} onClose={closeOverlay} /> :
+                                    <Overlay id={`error`} icon={<MdOutlineClose/>} header={status} message={feedback} onClose={closeOverlay} />)}
                                 <div className="contact-info">
                                     <h1 className="contact-header">
                                         Contact Info
