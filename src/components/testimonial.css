@@ -51,9 +51,7 @@
 
 .client-image{
     background-color: rgb(55,89,121);
-    border-top-left-radius: 130px;
-    border-bottom-left-radius: 130px;
-    border-bottom-right-radius: 130px;
+    border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
