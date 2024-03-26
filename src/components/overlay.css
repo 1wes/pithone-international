@@ -26,7 +26,6 @@
 }
 
 .icon{
-    background-color: rgb(68,189,50);
     width: 15%;
     display: flex;
     align-items: center;
@@ -34,6 +33,14 @@
     padding: 10px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+}
+
+#success > .icon{
+    background-color: rgb(68,189,50);
+}
+
+#error > .icon{
+    background-color: rgb(232,65,24);
 }
 
 .response-icon{
@@ -52,7 +59,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#success > .icon > .response-icon i{
     color: rgb(68,189,50);
+}
+
+#error > .icon > .response-icon i{
+    color: rgb(232,65,24);
 }
 
 .message{
@@ -69,8 +83,12 @@
     font-size: 14px;
 }
 
-.message h2{
+#success > .message h2{
     color: rgb(68,189,50);
+}
+
+#error > .message h2{
+    color: rgb(232,65,24);
 }
 
 .close{
