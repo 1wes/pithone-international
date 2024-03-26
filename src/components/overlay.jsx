@@ -2,33 +2,32 @@ import { Fragment } from "react";
 
 import './overlay.css';
 
-import { GiCheckMark } from "react-icons/gi";
 import { MdOutlineClose } from "react-icons/md";
 
-const Overlay = () => {
+const Overlay = ({ icon, header, message, onClose, id }) => {
     
     return (
         <Fragment>
             <div className="overlay">
                 <div className="overlay-content">
-                    <div className="response">
+                    <div className="response" id={id} >
                         <div className="icon">
                             <div className="response-icon">
                                 <i>
-                                    <GiCheckMark />                                    
+                                    {icon}                                    
                                 </i>
                             </div>
                         </div>
                         <div className="message">
                             <h2>
-                                Success !
+                                {header}
                             </h2>
                             <p>
-                                Your message has successfully been delivered
+                                {message}
                             </p>
                         </div>
                         <div className="close">
-                            <i>
+                            <i onClick={onClose} > 
                                 <MdOutlineClose/>
                             </i>
                         </div>
