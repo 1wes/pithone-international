@@ -93,6 +93,11 @@ const Contact = () => {
                                                     +254 715 688 292                                            
                                                 </Link>
                                             </div>
+                                            <div>
+                                                <Link to={`tel: +27 72 777 3484`} target="_blank" >
+                                                    +27 72 777 3484                                                 
+                                                </Link> (Pretoria, SA)    
+                                            </div>
                                         </ContactInfo>
                                         <ContactInfo icon={<MdOutgoingMail/>} >
                                             <Link to={`mailto: info@pithone.co.ke`} target="_blank" >
