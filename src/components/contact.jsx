@@ -57,7 +57,7 @@ const Contact = () => {
                 show: true,
                 error:true,
                 status: "Failed!",
-                feedback:"We encountered an error. Please try again or contact support."
+                feedback:"Message not delivered. Please try again or contact support."
             })
         })
 
