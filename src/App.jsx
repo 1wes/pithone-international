@@ -9,6 +9,7 @@ import Contact from './components/contact';
 import Extra from './components/gallery';
 import Footer from './components/footer';
 import Testimonials from './components/testimonial';
+import Jobs from './components/jobs';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <LandingPage />
       <About />
       <Services />
+      <Jobs/>
       <Testimonials/>
       <Contact />
       <Extra />
