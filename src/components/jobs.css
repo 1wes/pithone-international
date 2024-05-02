@@ -1,0 +1,69 @@
+.jobs-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 20px;
+}
+
+.job-card{
+    width: 32%;
+}
+
+.job-image{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+    outline: 3px solid rgb(55,89,121);
+}
+
+.jobs-cta{
+    margin-top: 50px;
+}
+
+#job-cta-btn{
+    background-color: rgb(55,89,121);
+    padding: 15px;
+    width: 28%;
+}
+
+.jobs-link{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width:380px){
+
+    .jobs-cards{
+        gap: 15px;
+        justify-content: space-between;
+    }
+
+    .job-card{
+        width: 47% !important;
+    }
+
+    #job-cta-btn{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:768px){
+
+    .job-card{
+        width: 47%;
+    }
+
+    #job-cta-btn{
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width:820px) and (max-width:1180px){
+
+    .job-card{
+        width: 48%;
+    }
+}
