@@ -41,8 +41,8 @@ const About=()=>{
                                 <img className="about-us-img" src={conferenceImg} />
                             </div>
                             <div className="company-stats">
-                                <Stat stat={`3+`} description={`Operation Years`}/>
-                                <Stat stat={`500+`} description={`Clients Served`} />
+                                <Stat stat={`5+`} description={`Operation Years`}/>
+                                <Stat stat={`1000+`} description={`Clients Served`} />
                                 <Stat stat={`6+`} description={`Countries`} />
                                 <Stat stat={`3+`} description={`Services Rendered`} />
                             </div>
